@@ -1,0 +1,224 @@
+****1. Import the numpy and pandas libraries***
+import numpy as np
+import pandas as pd
+import matpiotlib.pyplot as plt
+
+****2. load the data set ls-01****
+Is_org=pd.read_csv(" ")
+Is_org.head()
+
+****3. Create the two copies of the data set****
+Is=Is_org.copy()
+Is1=Is_org.copy()
+
+****4. Check the null values****
+Is_org.sinull().sum()
+
+****5. Missing data handling****
+pd.notna(Is['Gender'])
+pd.isna(Is['Gender'])
+
+****6. Remove the missing values****
+Is1.dropna(axis=0,thresh=9, inplace=True)
+Is1.head()
+Is.dropna(axis=1, thresh=286, inplace=True)
+Is.heda()
+
+****7. Filling the missing values****
+Is=Is_org.copy()
+Is1=Is_org.copy()
+Is.head()
+
+Is['Gender'].fillna(value=0, inplace=True)
+Is.head()
+
+****8. Group the data****
+Is1.groupby(['Gender'])['Gender'].count()
+
+****9. Label the missing values**
+Is1=['Gender'].fillna(value='missing',inplace=True)
+Is1.head
+
+***10. Group the data according to the gender***
+cat=pd.Categorical(Is1.Gender,categories=['male','female','missing'],ordered=True)
+cat
+
+**11. Import the data set as**
+Dataset=[['milk','onion','',]
+	['','','','','']
+	['','','']]
+
+**13. Import the pandas and mlxtend libraries**
+import pandas as pd
+from mlxtend.preprocessing import TransactionEncoder
+
+***14. Create the dataset as a dataframe***
+df=pd.DataFrame(te_ary,columns=te.columns_)
+df
+
+***15. Create the possible item set for the min_support=0.6 using apriori algorithum***
+from mlxtend.frequent_patterns import apriori
+frequent_itemset= apriori(df,min_support=0.6,use_colnames=True)
+frequent_itemset
+
+***16. Create the association rule mining*** 
+from mlxtend.frequent_patterns import association_rules
+res=association_rules(frequent_itemset,metric="confidence",min_threshold=0.7)
+res
+
+***17. Create the sub set of antecedents,consequents,support,confidence,lift***
+res1=res[['antecedents','consequents','support','confidence','lift']]
+res1
+
+***18. Retrieve the itemset which itemset have confidence >= 1***
+res2=rest1[res1['confidence'] >=1]
+res2
+
+*** Make an Array of dataset**
+x = dataset.iloc[:,0:8].values
+x
+
+***bar chart**
+x = pd.DataFrame(dataset)
+xa = barchart['Gender'].value_counts()
+plt.bar(xa.index,xa.values)
+plt.xlabel('Gender')
+plt.ylabel('gender size')
+plt.title('Gender')
+
+***pie chart**
+piechart = pd.DataFrame(dataset)
+x = piechart['Married'].value_counts()
+plt.pie(x,labels=x.index,autopct='%1.1f%%')
+
+
+
+**Import the suitable libraries**
+import pandas ad pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+***Import the Bank.CSV file into Google colab notebook***
+dataset=pd.read_csv('')
+
+*** Make an array of dataset***
+x= dataset.iloc[:,0:8].values
+x
+
+***Create the Elbow chart***
+from sklearn.cluster import kMeans
+wcss=[]
+for i in range(1,10):
+kmeans1 =kMeans(n_clusters=i, init='k-means++')
+kmeans1.fit(x)
+wcss.append(kmeans1.inertia_)
+
+wcss
+
+plt.plot(range(1,10),wcss)
+
+***Find the number of clusters****
+3
+
+*** Define the clusters for each record***
+kmeans1=kMeans(n_clusters =3,init='k-means++')
+y_kmeans =kmeans1.fit_predict(x)
+
+*** Concatenate the dataset and the cluster index***
+pd.concat([dataset,pd.DataFrame(y_kmeans)],axis=1)
+
+*** Visualize the clusters***
+plt.scatter(x[y_kmeans==0,0],x[y_kmeans==0,1],s=50,c='red')
+plt.scatter(x[y_kmeans==1,0],x[y_kmeans==1,1],s=50,c='blue')
+plt.scatter(x[y_kmeans==2,0],x[y_kmeans==2,1],s=50,c='yellow')
+
+*** Find the cluster centroid for each cluster***
+clusters =kmeans1.cluster_centers_
+clusters
+
+*** Visualize the cluster centroids in the scatter plot***
+plt.scatter(x[y_kmeans==0,0],x[y_kmeans==0,1],s=50,c='red')
+plt.scatter(x[y_kmeans==1,0],x[y_kmeans==1,1],s=50,c='blue')
+plt.scatter(x[y_kmeans==2,0],x[y_kmeans==2,1],s=50,c='yellow')
+plt.scatter(clusters[0],[0],clusters[0][1],marker='*',s=200,color='black'
+plt.scatter(clusters[1],[0],clusters[1][1],marker='*',s=200,color='black'
+plt.scatter(clusters[2],[0],clusters[2][1],marker='*',s=200,color='black'
+
+***Import suitable libraries***
+import matplotlib.pyplot as plt
+
+***Separate the data frame into two parts***
+x=df.values
+y=df['PEP']
+
+***Delete the class variable in independent dataset***
+x=np.delete(x,7,axis=1)
+print(x)
+
+v. Split the dataset into test and training set
+vi. Find the prediction of the Using Decision tree
+***Construct the confusion matrix***
+y_pred=df_clf.predict(x_test)
+y_pred
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
